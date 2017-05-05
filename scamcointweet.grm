@@ -1,0 +1,35 @@
+I ::=   "title:    Scamcoin tweets\n"
+      ^ "author:   Valerio &lt;scamcoin@valeriovaccaro.it&gt;\n"
+      ^ "language: english\n"
+      ^ "status:   refinable\n"
+      ^ "topic:    misc\n"
+      ^ "audience: dedicated to" \Coin^, \Coin [^, \Coin] 'n \Coin ^"\n"
+      ^ "created:  02/05/2017"
+;
+
+S ::= Tweet;
+
+Tweet ::= Make | Ico | Dead | Like | About;
+
+Make ::= ("Make") Coin Adj ("again");
+
+Adj ::= ("dead" | "alive" | "great" | "long" | "fat" | "boring" | "funny" | "mutable" | "immutable" | "strong" | "weak" | "lazy" | "bamboozled" | "crazy" | "profitable" | "coloured"
+cial" | "fluffy" | "profitable" );
+
+Coin ::= Pre^Post;
+Pre ::= ("Gossip" | "Byte" | "Scam" | "Game" | "Vegan" | "Girl" | "Boy" | "Light" | "Super"| "Puppy" | "Bash" | "Dragon" | "Doge" | "Unicorn" );
+Post ::= ("Coin" | "Gold" | "ereum" | "ero" | "ipple" | "safecoin" );
+
+Ico ::= "ICO stands for " WordI WordC WordO;
+
+WordI ::= ("Intelligent" | "Incompetent" | "Initial" | "Internal" | "Immaterial" | "Inconsistent" | "Intense");
+WordC ::= ("Crypto" | "Coffeined" | "Cabalistic" | "Cacophonic" | "Caloric" | "Cool" | "Cherry flavoured" | "Cheap" | "Chaotic");
+WordO ::= ("Orango" | "Orange" | "Organization" | "Offering" | "Oracle" | "Oblivion" | "OGM" | "OP_CODE");
+
+Dead ::= "Bitcoin is dead, now it's time for" Coin;
+
+Like ::= "It's like" Tech "meeting" Tech "but on the blockchain";
+
+Tech ::= ("Uber" | "AirBnb" | "eBay" | "Amazon" | "Scientology" | "Telegram" | "WhatsApp" | "Signal" | "Google maps");
+
+About ::= "It's not about" Tech "but it's about the underlying blockchain technology";
